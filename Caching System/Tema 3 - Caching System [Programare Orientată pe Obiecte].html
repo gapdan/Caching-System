@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://elf.cs.pub.ro/poo/teme/tema3 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Tema 3 - Caching System [Programare Orientată pe Obiecte]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="teme,tema3">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/poo/lib/exe/opensearch.php" title="Programare Orientată pe Obiecte">
+<link rel="start" href="http://elf.cs.pub.ro/poo/">
+<link rel="contents" href="http://elf.cs.pub.ro/poo/teme/tema3?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/poo/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/poo/feed.php?mode=list&amp;ns=teme">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/poo/_export/xhtml/teme/tema3">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://elf.cs.pub.ro/poo/_export/raw/teme/tema3">
+<link rel="canonical" href="http://elf.cs.pub.ro/poo/teme/tema3">
+<link rel="stylesheet" type="text/css" href="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='teme';var JSINFO = {"id":"teme:tema3","namespace":"teme","isadmin":0,"isauth":0,"move_renameokay":false};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/poo/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/poo/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/poo/teme/tema3#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/poo/home" accesskey="h" title="[H]"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/logo.png" width="64" height="64" alt=""> <span>Programare Orientată pe Obiecte</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=login&amp;sectok=28cc684795c190c97be30b9e991a1333" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/poo/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none;"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/poo/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="teme:tema3"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Show pagesource</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Recent changes</option><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=media&amp;ns=teme" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                            <div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/poo/home" class="wikilink1" title="home">Programare Orientată pe Obiecte</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/poo/teme/home" class="wikilink1" title="teme:home">Teme</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/poo/teme/tema3" class="wikilink1" title="teme:tema3">Tema 3 - Caching System</a></span></bdi></div>
+                                </div>
+    
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+<strong>Administrativ</strong>
+</p>
+<ul aria-expanded="true" style="">
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/regulament" class="wikilink1" title="administrativ:regulament">Regulament</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/echipa" class="wikilink1" title="administrativ:echipa">Echipa</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/barem_teme" class="wikilink1" title="administrativ:barem_teme">Indicații pentru teme</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/indicatii_practic" class="wikilink1" title="administrativ:indicatii_practic">Indicații pentru testul practic</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/coding_style_ide" class="wikilink1" title="administrativ:coding_style_ide">Recomandări cod</a></div>
+</li>
+</ul>
+
+<p aria-expanded="true" style="">
+<strong>Laboratoare</strong>
+</p>
+<ul aria-expanded="true" style="">
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/java-basics" class="wikilink1" title="laboratoare:java-basics"> Lab 01 - Java Basics</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/constructori-referinte" class="wikilink1" title="laboratoare:constructori-referinte"> Lab 02 - Constructori și referințe</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/agregare-mostenire" class="wikilink1" title="laboratoare:agregare-mostenire"> Lab 03 - Agregare și moștenire</a></div>
+</li>
+<li class="level0"><div class="li"> <span class="curid"><a href="http://elf.cs.pub.ro/poo/laboratoare/clase-abstracte-interfete" class="wikilink1" title="laboratoare:clase-abstracte-interfete"> Lab 04 - Clase abstracte și interfețe</a></span></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/clase-interne" class="wikilink1" title="laboratoare:clase-interne"> Lab 05 - Clase interne</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/visitor" class="wikilink1" title="laboratoare:visitor"> Lab 06 - More OOP &amp; Visitor</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/colectii" class="wikilink1" title="laboratoare:colectii">  Lab 07 - Colecții</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/genericitate" class="wikilink1" title="laboratoare:genericitate"> Lab 08 - Genericitate</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/exceptii" class="wikilink1" title="laboratoare:exceptii"> Lab 09 - JUnit &amp; Excepții</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/design-patterns" class="wikilink1" title="laboratoare:design-patterns"> Lab 10 - Design Patterns</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/design-patterns2" class="wikilink1" title="laboratoare:design-patterns2"> Lab 11 - Design Patterns</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/recapitulare" class="wikilink1" title="laboratoare:recapitulare"> Lab 12 - Recapitulare</a></div>
+</li>
+</ul>
+
+<p aria-expanded="true" style="">
+<strong>Teme</strong>
+</p>
+<ul aria-expanded="true" style="">
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/teme/tema1" class="wikilink1" title="teme:tema1"> Tema 1 - League of OOP</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/teme/tema2" class="wikilink1" title="teme:tema2"> Tema 2 - MiniCAD</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/teme/tema3" class="wikilink1" title="teme:tema3"> Tema 3 - Caching System</a></div>
+</li>
+</ul>
+
+<p aria-expanded="true" style="">
+<strong>Resurse utile</strong>
+</p>
+<ul aria-expanded="true" style="">
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/resurse-utile/instalare-intellij-idea" class="wikilink1" title="resurse-utile:instalare-intellij-idea"> Instalare IntelliJ Idea </a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/resurse-utile/activare-intellij-idea" class="wikilink1" title="resurse-utile:activare-intellij-idea"> Activare IntelliJ Idea</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/resurse-utile/instalare-eclipse" class="wikilink1" title="resurse-utile:instalare-eclipse"> Instalare Eclipse</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/resurse-utile/proiect-intellij-idea" class="wikilink1" title="resurse-utile:proiect-intellij-idea"> Demo proiect IntelliJ Idea</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/resurse/proiect-eclipse" class="wikilink1" title="resurse:proiect-eclipse"> Demo proiect Eclipse</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/tutorial-checkstyle" class="wikilink1" title="laboratoare:tutorial-checkstyle"> Tutorial checkstyle</a> </div>
+</li>
+</ul>
+
+<p aria-expanded="true" style="">
+<strong>Alte resurse</strong>
+</p>
+<ul aria-expanded="true" style="">
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/poo-java" class="wikilink1" title="laboratoare:poo-java">POO și Java</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/organizare-acces" class="wikilink1" title="laboratoare:organizare-acces">Organizarea surselor și controlul accesului</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/tutorial-io" class="wikilink1" title="laboratoare:tutorial-io">Tutorial I/O</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/tutorial-doubledispatch" class="wikilink1" title="laboratoare:tutorial-doubledispatch">Double Dispatch - scurt tutorial</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/reflection" class="wikilink1" title="laboratoare:reflection"> Reflection</a> </div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/test/index" class="wikilink1" title="test:index"> Teste grilă</a></div>
+</li>
+</ul>
+
+<p aria-expanded="true" style="">
+<strong>Arhiva</strong>
+</p>
+
+<p aria-expanded="true" style="">
+<a href="http://elf.cs.pub.ro/poo/arhiva/teme/2016/index" class="wikilink1" title="arhiva:teme:2016:index">2016-2017</a>
+</p>
+
+<p aria-expanded="true" style="">
+<a href="http://elf.cs.pub.ro/poo/arhiva/teme/2015/index" class="wikilink1" title="arhiva:teme:2015:index">2015-2016</a>
+</p>
+
+<p aria-expanded="true" style="">
+<a href="http://elf.cs.pub.ro/poo/arhiva/teme/2014/index" class="wikilink1" title="arhiva:teme:2014:index">2014-2015</a>
+</p>
+
+<p aria-expanded="true" style="">
+<a href="http://elf.cs.pub.ro/poo/arhiva/teme/2013/index" class="wikilink1" title="arhiva:teme:2013:index">2013-2014</a>
+</p>
+                                            </div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="pageId"><span>teme:tema3</span></div>
+
+                <div class="page group" style="min-height: 848px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="">
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#tema-3-caching-system">Tema 3 - Caching System</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#obiective">Obiective</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#descriere">Descriere</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#cache">Cache</a></div></li>
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#cache-replacement-policy">Cache replacement policy</a></div></li>
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#hit-miss">Hit &amp; Miss</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#cerinte-si-detalii-implementare">Cerințe și detalii implementare</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#caches">Caches</a></div></li>
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#observer-pattern">Observer Pattern</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#testarea-functionalitatii">Testarea funcționalității</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#precizari">Precizări</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#date-de-intrare-date-de-iesire">Date de intrare. Date de ieșire.</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#punctaj">Punctaj</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#structura-arhivei">Structura arhivei</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#checker-ul">Checker-ul</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#resurse">Resurse</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/poo/teme/tema3#referinte">Referințe</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="tema-3-caching-system">Tema 3 - Caching System</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabili: <a href="mailto:ghimisi.alexandru@yahoo.com" class="mail" title="ghimisi.alexandru@yahoo.com">Alexandru Ghimisi</a> <a href="mailto:cristianionutnancu@gmail.com" class="mail" title="cristianionutnancu@gmail.com">Cristian-Ionut Nancu</a> <a href="mailto:petrescu_mihnea@yahoo.com" class="mail" title="petrescu_mihnea@yahoo.com">Mihnea Andrei Petrescu</a> <a href="mailto:razvan.ch95@gmail.com" class="mail" title="razvan.ch95@gmail.com">Razvan Chitu</a></div>
+</li>
+<li class="level0"><div class="li"> Deadline: <strong>17.12.2017</strong></div>
+</li>
+<li class="level0"><div class="li"> Deadline hard: 07.01.2018 - pe perioada vacanței nu se aplică depunctări pe vmchecker.</div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 27.11.2017</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 27.11.2017</div>
+</li>
+<li class="level0"><div class="li"> Data tester-ului: 01.12.2017</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="obiective">Obiective</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Integrarea cu un mod arhitectural de a rezolva o problemă reală</div>
+</li>
+<li class="level0"><div class="li"> Aprofundarea noțiunilor de moștenire, agregare și interfațare</div>
+</li>
+<li class="level0"><div class="li"> Lucrul cu noțiunile din cursul de Structuri de Date (stive, cozi, liste dublu înlănțuite, hashtables) in context OOP</div>
+</li>
+<li class="level0"><div class="li"> Aprofundarea noțiunilor de Design Patterns:</div>
+<ul>
+<li class="level1"><div class="li"> <strong><a href="https://sourcemaking.com/design_patterns/adapter" class="urlextern" title="https://sourcemaking.com/design_patterns/adapter" rel="nofollow">Adapter pattern</a></strong></div>
+</li>
+<li class="level1"><div class="li"> <strong><a href="https://sourcemaking.com/design_patterns/strategy" class="urlextern" title="https://sourcemaking.com/design_patterns/strategy" rel="nofollow">Strategy pattern</a></strong></div>
+</li>
+<li class="level1"><div class="li"> <strong><a href="https://sourcemaking.com/design_patterns/observer" class="urlextern" title="https://sourcemaking.com/design_patterns/observer" rel="nofollow">Observer pattern</a></strong></div>
+</li>
+</ul>
+</li>
+<li class="level0"><div class="li"> Respectarea unui coding-style</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit3" id="descriere">Descriere</h2>
+<div class="level2">
+
+<p>
+În cadrul acestei teme, vă propunem să implementați un sistem de caching pentru fișiere text.<br>
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="cache">Cache</h3>
+<div class="level3">
+
+<p>
+Pe scurt, un <strong><a href="https://en.wikipedia.org/wiki/Cache_(computing)" class="urlextern" title="https://en.wikipedia.org/wiki/Cache_(computing)" rel="nofollow">cache</a></strong> este o arie temporară de stocare unde datele utilizate în mod frecvent pot fi depozitate pentru un acces rapid la acestea. 
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Cache_(computing)#/media/File:Cache,basic.svg" class="media" title="https://en.wikipedia.org/wiki/Cache_(computing)#/media/File:Cache,basic.svg" rel="nofollow"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/cachesample.jpg" class="mediacenter" title=" Cache Sample Diagram" alt=" Cache Sample Diagram" width="400"></a>
+</p>
+
+<p>
+Default, sistemul de operare cache-uiește datele citite de pe disc și pe cele scrise pe disc. Acest lucru implică faptul că operațiile de citire se fac mai degrabă asupra unei memorii de sistem (system file cache) decât asupra discului fizic. Analog, și operațiile de scriere se fac asupra memoriei de system cache. Sistemul de caching pe care îl veți implementa va simula reținerea în memorie a datelor unui fișier împreună cu calea către acel fișier pe discul fizic. 
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="cache-replacement-policy">Cache replacement policy</h3>
+<div class="level3">
+
+<p>
+Politicile de înlocuire a cache-ului sunt instrucțiuni de optimizare – sau algoritmi – pe care un computer sau o structură hardware le poate urma pentru a manageria memoria cache stocată pe un calculator. Când cache-ul este plin, algoritmul alege ce elemente să decarteze pentru a face loc unor elemente noi. 
+</p>
+
+<p>
+ Variantele politicilor de replacement cache asupra cărora ne vom concentra sunt:  
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong><a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#First_In_First_Out_.28FIFO.29" class="urlextern" title="https://en.wikipedia.org/wiki/Cache_replacement_policies#First_In_First_Out_.28FIFO.29" rel="nofollow">FIFO</a></strong> </div>
+</li>
+<li class="level0"><div class="li"> <strong><a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_.28LRU.29" class="urlextern" title="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_.28LRU.29" rel="nofollow">LRU</a></strong> </div>
+</li>
+<li class="level0"><div class="li"> <strong><a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Time_aware_Least_Recently_Used_.28TLRU.29.5B5.5D" class="urlextern" title="https://en.wikipedia.org/wiki/Cache_replacement_policies#Time_aware_Least_Recently_Used_.28TLRU.29.5B5.5D" rel="nofollow">TLRU</a></strong> </div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit6" id="hit-miss">Hit &amp; Miss</h3>
+<div class="level3">
+
+<p>
+ Pentru evaluarea performanței, cache-ul vostru trebuie să comunice diverse evenimente, precum: hit, miss, put. 
+</p>
+
+<p>
+ <strong><a href="https://www.techopedia.com/definition/6306/cache-hit" class="urlextern" title="https://www.techopedia.com/definition/6306/cache-hit" rel="nofollow">Cache hit</a></strong> reprezintă o stare în care datele solicitate de către aplicație se găsesc în memoria cache. 
+</p>
+
+<p>
+ <strong><a href="https://www.techopedia.com/definition/6308/cache-miss" class="urlextern" title="https://www.techopedia.com/definition/6308/cache-miss" rel="nofollow">Cache miss</a></strong> reprezintă o stare în care datele solicitate de către aplicație <strong>NU</strong> se găsesc în memoria cache. 
+</p>
+
+<p>
+ <strong>Cache put</strong> reprezintă o nouă stare introdusă de către noi, în care cache-ul primește date pentru a le reține (sau updata) în memoria sa. 
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="cerinte-si-detalii-implementare">Cerințe și detalii implementare</h2>
+<div class="level2">
+
+<p>
+ Pornind de la scheletul de cod, vă propunem să creați propria ierarhie cache. Aceasta trebuie să suporte funcționalitatea de a controla dimensiunea unui cache, de a elimina elementele vechi sau de a evalua performanța pe bază de metrici. 
+</p>
+
+<p>
+ Pentru funcționalitatea de eliminare a elementelor vechi definim conceptul de <strong>CacheStalePolicy</strong>, care reprezintă un modul ce conține strategia pe care un cache trebuie să o urmeze pentru a elimină elementele vechi. 
+</p>
+
+<p>
+ Odată implementate cache-urile <code>ObservableFIFOCache</code>, <code>LRUCache</code> și <code>TimeAwareCache</code>, sistemul vostru de cache va trebui să lanseze evenimente. 
+</p>
+
+<p>
+ </p><p></p><div class="notewarning">Este <em class="u">obligatorie</em> folosirea <strong>Observer Pattern</strong>. Dacă tema nu respectă această cerință, nu va primi punctajul testelor.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit8" id="caches">Caches</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="observablecache">ObservableCache</h4>
+<div class="level4">
+
+<p>
+ Completați funcționalitatea clasei abstracte <code>ObservableCache</code>. Clasa are nevoie de: 
+</p>
+<ul>
+<li class="level1"><div class="li"> o metodă pentru setarea unei politici de înlocuire a cache-ului (<code>setStalePolicy</code>) </div>
+</li>
+<li class="level0"><div class="li"> o metodă pentru setarea unui listener de evenimente (<code>setCacheListener</code>) </div>
+</li>
+<li class="level0"><div class="li"> o metodă pentru eliminarea intrărilor în cache care sunt considerate “expirate” (<code>clearStaleEntries</code>) </div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="observablefifocache">ObservableFIFOCache</h4>
+<div class="level4">
+
+<p>
+ În scheletul de cod veți găsi o clasă <code>FIFOCache</code> care reprezintă o implementare non-observabila a unui cache bazat pe coadă. Nu aveți voie să modificați codul acestei clase, ci doar să vă folosiți de metodele sale publice. 
+</p>
+
+<p>
+ Implementați <code>ObservableFIFOCache</code> având la bază clasa <code>FIFOCache</code>, pentru ca această din urmă să poată accepta un listener și să semnaleze evenimente. 
+</p>
+
+<p>
+ </p><p></p><div class="noteclassic">
+ Relația dintre <code>ObservableFIFOCache</code> și <code>FIFOCache</code> ar trebui să fie una de <a href="http://elf.cs.pub.ro/poo/laboratoare/agregare-mostenire#agregare-si-compunere" class="wikilink1" title="laboratoare:agregare-mostenire">compunere</a>, nu de moștenire. <br> 
+</div><p></p>
+<p></p>
+
+</div>
+
+<h4 id="lrucache">LRUCache</h4>
+<div class="level4">
+
+<p>
+ În cazul LRU cache, implementarea operațiilor specifice (get, put) trebuie să respecte o complexitate temporală <strong>O(1)</strong>. 
+</p>
+
+<p>
+ </p><p></p><div class="noteclassic">
+ Cheia rezolvării implică o listă dublu înlănțuită care permite mutarea rapidă a nodurilor. Pentru acest task vă recomandăm să implementați o lista dublu înlănțuită generică. <br> 
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">
+<p></p>
+
+<p>
+Nu aveţi voie să folosiţi <strong>LinkedHashMap</strong> în implementarea LRUCache. Orice astfel de implementare nu va fi luată în considerare.
+</p>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h4 id="timeawarecache">TimeAwareCache</h4>
+<div class="level4">
+
+<p>
+ Implementați <code>TimeAwareCache</code> folosindu-vă de asemănarea dintre acest tip de cache și cel de la task-ul anterior (LRUCache).
+</p>
+
+<p>
+ <code>TimeAwareCache</code> va avea nevoie de o modalitate de a interoga timestamp-ul asociat unei chei (metoda <code>getTimeStampOfKey</code>) și de o metodă care să seteze o politică de expirare a elementelor (<code>setExpirePolicy</code>). <br>
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="observer-pattern">Observer Pattern</h3>
+<div class="level3">
+
+<p>
+Cache-urile implementate de voi au nevoie si de un mecanism de semnalare a evenimentelor de hit, miss si put (update). Design pattern-ul <strong>Observer</strong> poate fi aplicat aici, considerand cache-ul drept subiect si mai multe tipuri de <strong>CacheListener</strong> drept observatori.
+</p>
+
+</div>
+
+<h4 id="statslistener">StatsListener</h4>
+<div class="level4">
+
+<p>
+ Implementați StatsListener. Ascultă evenimentele onHit, onMiss și onPut și reține câte astfel de evenimente au fost semnalate la nivel global (trebuie să conțină getteri!). 
+</p>
+
+</div>
+
+<h4 id="keystatslistener">KeyStatsListener</h4>
+<div class="level4">
+
+<p>
+ Implementați KeyStatsListener. Ascultă aceleași evenimente ca StatsListener, ține evidența solicitărilor per cheie și conține metodele publice care întorc liste cu primele <strong>n</strong> cele mai solicitate chei care s-au găsit / care nu s-au găsit în cache, sau care au fost cele mai updatate. De asemenea, va avea metode pentru a interoga aceste statistici și pentru o cheie anume. 
+</p>
+
+</div>
+
+<h4 id="broadcastlistener">BroadcastListener</h4>
+<div class="level4">
+
+<p>
+ Implementați BroadcastListener. Acesta poate conține mai mulți listeners și comunică fiecăruia evenimentele semnalate de cache. 
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="testarea-functionalitatii">Testarea funcționalității</h2>
+<div class="level2">
+
+<p>
+ Cele 3 tipuri de cache implementate de voi vor fi testate prin intermediul unui cache de fișiere. Clasa <code>FileCache</code> va folosi drept cheie calea către un fișier, iar valoarea asociată va fi chiar conținutul fișierului. 
+</p>
+
+<p>
+ Atunci când un fișier nu este găsit în cache, el trebuie citit din sistemul de fișiere și reținut. Funcționalitatea această trebuie implementată de voi printr-un <code>CacheListener</code>, în metoda <code>createCacheListener</code> din clasă <code>FileCache</code> (hint: event-ul <em>onMiss</em>).  <br>
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="precizari">Precizări</h2>
+<div class="level2">
+
+<p>
+ Structurile de date implementate de voi trebuie să fie <strong>generice</strong>. 
+</p>
+
+<p>
+ Pentru simplitate, clasa <code>ObservableCache</code> suportă doar un singur listener. Totuși, pentru testare și evaluare a performanței, am dori să folosiți mai mulți listeneri pentru același cache. 
+</p>
+
+<p>
+ Pentru a nu schimba implementarea din <code>ObservableCache</code>, trebuie implementat un <code>BroadcastListener</code> (care să conțină mai mulți listeners și să comunice fiecăruia evenimentele semnalate de cache). 
+</p>
+
+<p>
+</p><p></p><div class="noteclassic"> README-ul nu trebuie sa cuprinda explicatia fiecarei metode. Aceste explicatii trebuie puse in javadoc 
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit12" id="date-de-intrare-date-de-iesire">Date de intrare. Date de ieșire.</h2>
+<div class="level2">
+
+<p>
+ Clasa <strong>Main</strong> conține logica de parsare a testelor și de afișare corespunzătoare a rezultatelor. Corectitudinea rezultatelor depinde de implementarea corecta a celor trei tipuri de Cache si a observatorilor (listeners).
+</p>
+
+<p>
+Pentru partea de debug, puteți inspecta fișierele de test, care conțin și comentarii ce va pot ajuta în a înțelege rezultatele. Formatul testelor este descris în fișierul <code>README.md</code>.<br>
+</p>
+
+</div>
+
+<h2 class="sectionedit13" id="punctaj">Punctaj</h2>
+<div class="level2">
+
+<p>
+<strong>Punctaj (100p)</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>80p</strong> teste publice</div>
+</li>
+<li class="level0"><div class="li"> <strong>10p</strong> coding style</div>
+</li>
+<li class="level0"><div class="li"> <strong>5p</strong> README, aspect cod, comentarii (dacă e cazul)</div>
+</li>
+<li class="level0"><div class="li"> <strong>5p</strong> Javadoc</div>
+</li>
+</ul>
+
+<p>
+La evaluare mai pot apărea depunctări pentru nerespectarea design-ului impus sau alte situații specifice temei, neprevăzute în <a href="http://elf.cs.pub.ro/poo/administrativ/barem_teme" class="wikilink1" title="administrativ:barem_teme">barem</a>.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Pentru a primi punctele pentru coding style, tema trebuie să treacă testul executat de <a href="http://checkstyle.sourceforge.net/" class="urlextern" title="http://checkstyle.sourceforge.net/" rel="nofollow"> Checkstyle </a> <a href="http://elf.cs.pub.ro/poo/teme/tema1#linkuri-utile" class="wikilink1" title="teme:tema1"> [4]</a>. Dacă este picat și numărul de erori depistate depășește 30 (o treime din punctajul maxim, fără bonus), atunci punctele pentru coding-style nu vor fi acordate iar dacă punctajul este negativ, <em>acesta se trunchiază la 0</em>.
+<p></p>
+
+<p>
+Exemple:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>punctaj_total = 100</code> și <code>nr_erori = 200</code> ⇒ <code>nota_finala = 90</code></div>
+</li>
+<li class="level0"><div class="li"> <code>punctaj_total = 100</code> și <code>nr_erori = 29</code> ⇒ <code>nota_finala = 100</code></div>
+</li>
+<li class="level0"><div class="li"> <code>punctaj_total = 80</code> și <code>nr_erori = 30</code> ⇒ <code>nota_finala = 80</code></div>
+</li>
+<li class="level0"><div class="li"> <code>punctaj_total = 80</code> și <code>nr_erori = 31</code> ⇒ <code>nota_finala = 70</code></div>
+</li>
+</ul>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">
+Temele vor fi testate împotriva plagiatului. Orice tentativă de copiere va duce la <strong>anularea punctajului</strong> de pe parcursul semestrului şi <strong>repetarea materiei</strong> atât pentru sursă(e) cât şi pentru destinație(ii), fără excepție.
+<p></p>
+
+<p>
+<a href="https://media.giphy.com/media/8abAbOrQ9rvLG/giphy.gif" class="urlextern" title="https://media.giphy.com/media/8abAbOrQ9rvLG/giphy.gif" rel="nofollow"> You shall indeed not pass !!</a>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit14" id="structura-arhivei">Structura arhivei</h2>
+<div class="level2">
+
+<p>
+Arhiva pe care o veţi urca pe <strong>Vmchecker</strong> va trebui să conţină în directorul rădăcină:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>README</code> în care să explicaţi toate functionalitatile implementate și alte detalii relevante pentru implementare.</div>
+</li>
+<li class="level1"><div class="li"> directorul <code>src</code> ce conţine fişierele sursă. <strong>Nu modificaţi denumirea directorului src. Checker-ul se bazează pe această denumire.</strong></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit15" id="checker-ul">Checker-ul</h2>
+<div class="level2">
+
+<p>
+Checkerul de pe <strong>VMChecker</strong> va fi cel public din <a href="https://github.com/oop-pub/teme/tree/master/tema3" class="urlextern" title="https://github.com/oop-pub/teme/tree/master/tema3" rel="nofollow"> repository-ului de Github al Temei 3</a>. Pentru testare locală puteţi rula scriptul <code>test.sh</code>.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic"> Împreună cu checker-ul aveţi disponibil pentru testare locală şi un Makefile denumit <code>CachingMakefile</code>. Makefile-ul poate fi folosit cu următoarea comandă:
+<p></p>
+<pre class="code">make -f CachingMakefile</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit16" id="resurse">Resurse</h2>
+<div class="level2">
+
+<p>
+Implementarea temei va porni de la scheletul de cod disponibil în <a href="https://github.com/oop-pub/teme/tree/master/tema3" class="urlextern" title="https://github.com/oop-pub/teme/tree/master/tema3" rel="nofollow"> repository-ului de Github al Temei 3</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="referinte">Referințe</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/barem_teme" class="wikilink1" title="administrativ:barem_teme">Indicații pentru teme</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/administrativ/coding_style_ide" class="wikilink1" title="administrativ:coding_style_ide">Despre cod și IDE</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/design-patterns" class="wikilink1" title="laboratoare:design-patterns">Design patterns - Singleton, Factory, Observer</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/poo/laboratoare/design-patterns2" class="wikilink1" title="laboratoare:design-patterns2">Design patterns - Command, Strategy</a></div>
+</li>
+</ul>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>teme/tema3.txt</bdi> · Last modified: 2017/12/11 03:22 by <bdi>Razvan Chitu</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]"><span>Show pagesource</span></a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3?do=export_pdf" class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li class="plugin_move_page"><a href="http://elf.cs.pub.ro/poo/teme/tema3"><span>Rename Page</span></a></li><li><a href="http://elf.cs.pub.ro/poo/teme/tema3#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Tema 3 - Caching System [Programare Orientată pe Obiecte]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

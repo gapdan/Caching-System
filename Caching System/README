@@ -1,0 +1,20 @@
+Tema3-POO, Popescu George-Aurelian
+
+Am inceput tema dupa ce am analizat ceva scheletul de cod.
+Imi pica testul 7, nu stiu de ce, ori da TLE ori intra in bucla, daca gasiti din
+intamplare/dorit bug-ul chiar sunt curios ce avea.
+Am implementat clasa de DoublyLinkedList si pe cea de DoublyLinkedListNode ca si 
+clase ajutatoare in rezolvarea LRUCache si TimeAwareCache.
+Pentru a rezolva query-urile din KeyStatsListener am folosit hash-uri si PriorityQueue
+pentru a scoate top n de fiecare data.
+Pentru debugging am implementat si metoda de toString in Pair.
+Pentru clasa de DoublyLinkedList/...Node am incercat sa dau nume metodelor cat mai sugestive
+si mai intutitiv de folosit (asemanatoare cu cele din Collections) pentru a nu mai genera
+JavaDocs pentru clasele respective.
+Pentru LRU Cache am folosit DoublyLinkedList si un hash, in care asociam fiecarei chei cate o 
+pereche formata din nodul respectiv cheii din DoublyLinkedList si valoarea respectiva.
+Pentru TimeAwareCache am mai tinut un hash auxiliar (timestamps) in care tineam minte pentru fiecare
+cheie ce se gasea in hash, timestamp-ul la care a fost introdusa.
+
+
+
